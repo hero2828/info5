@@ -12,15 +12,15 @@ export default async ({ req, res, log, error }) => {
   const users = new Users(client);
  log(process.env.collection)
   try {
-    const databases = new Databases(client);
-     await databases.createDocument(
-      process.env.db,
-      process.env.collection,
-      data.$id,
-      {
-        name: data.name,
-      },
-    );
+    // const databases = new Databases(client);
+    //  await databases.createDocument(
+    //   process.env.db,
+    //   process.env.collection,
+    //   data.$id,
+    //   {
+    //     name: data.name,
+    //   },
+    // );
     return res.json({data:req.bodyJson})
   } catch(err) {
     error("Could not list users: " + err.message);
