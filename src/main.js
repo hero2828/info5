@@ -24,7 +24,7 @@ export default async ({ req, res, log, error }) => {
 
     
     
-    return res.json({data:data.name});
+   return res.json({ message: "User created successfully" })
   } catch(err) {
     error("Could not list users: " + err.message);
   }
