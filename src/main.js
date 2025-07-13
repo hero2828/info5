@@ -21,7 +21,7 @@ export default async ({ req, res, log, error }) => {
         name: data.name,
       },
     );
-    return res.json({name:1})
+    return res.json({data:req.bodyJson})
   } catch(err) {
     error("Could not list users: " + err.message);
   }
