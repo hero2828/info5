@@ -16,7 +16,8 @@ export default async ({ req, res, log, error }) => {
     // These logs won't be seen by your end users
     log(`Total users: ${response.total}`);
     return res.json({
-      user:response
+      user:response,
+      total:response.total,
     })
   } catch(err) {
     error("Could not list users: " + err.message);
