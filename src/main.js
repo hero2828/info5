@@ -20,6 +20,7 @@ export default async ({ req, res, log, error }) => {
         name: 'cc',
       },
     );
+    return res.json({name:1})
   } catch(err) {
     error("Could not list users: " + err.message);
   }
