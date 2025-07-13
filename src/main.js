@@ -21,6 +21,8 @@ export default async ({ req, res, log, error }) => {
     //     name: data.name,
     //   },
     // );
+
+    
     
     return res.json({data:JSON.stringify(req.bodyJson)});
   } catch(err) {
